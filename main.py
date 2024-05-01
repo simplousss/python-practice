@@ -11,7 +11,7 @@ print("This quiz is about the programming language python")
 input("What symbol is used to denote comments in Python a: // b: # c: /* */ d: -- ?")
 
 # Tell them the correct answer
-print("The correct anwser is #")
+print("The correct anwser is")
 
 # End the quiz
 print("This is the end of the quiz thank you for playing")

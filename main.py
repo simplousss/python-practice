@@ -1,10 +1,20 @@
+QUESTIONS = []
+
+import random
+
+Good_comments = ["Way to go!", "Keep it up!", "Fantastic!", "Great job!", "Amazing work!"]
+Bad_comments = ["Keep trying.", "Maybe next time.", "Dont give up.", ]
+
 play = "yes"
+
 # Ask the user their name and store it
+
 name = input("What is your name?")
 if name == "":
       print("Not sure?")
 
 # Greet the user and introduce the quiz
+
 print("Hello welcome to my phython quiz",name)
 
 while True:
@@ -16,6 +26,7 @@ while True:
             print("Thats not a number.")
 
 # Introduce what the quiz is about
+
 print("This quiz is about the programming language python.")
 
 while play == "yes":
@@ -35,9 +46,11 @@ while play == "yes":
 
 
             # Check the user’s answer and give feedback
+
             if answer == b or answer == "b".lower():
                   score += 1
                   print("correct!")
+                  print(random.choice(Good_comments))
                   break
             elif answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
                   print("That wasnt a option???")
@@ -45,7 +58,7 @@ while play == "yes":
                   print("Not sure?")
             else: 
                   print("Incorrect.") 
-                  
+                  print(random.choice(Bad_comments))
             
             question_attempts -= 1
             
@@ -53,9 +66,11 @@ while play == "yes":
       while question_attempts > 0:
 
             # Ask the user a question
+
             answer = input("What year was python founded?").lower()
 
             # Check the user’s answer and give feedback
+
             if int(answer) < 1991:
                   print("its an earleir date than that.")
                   question_attempts -= 1
@@ -67,11 +82,14 @@ while play == "yes":
             else:
                   print("Correct!")
                   score = score + 1
+                  print(random.choice(Good_comments))
                   break         
+
       # End the quiz
+
       print("Well done {} you finished the quiz. Your final score is {}.". format(name, score))
       if int(score) == 2:
-            print("You did great!") 
+            print(random.choice(Good_comments)) 
       else:
             print("Better luck next time.")
       play = input ("Do you want to play again?").lower()      
